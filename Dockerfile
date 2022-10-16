@@ -25,11 +25,12 @@ RUN mkdir public
 ADD index.html public/
 
 WORKDIR /
-ADD configure.sh /
-RUN chmod +x configure.sh
+#ADD configure.sh /
+#RUN chmod +x configure.sh
 
-VOLUME ["/home"]
+VOLUME ["/home/public"]
 
-CMD ["./configure.sh"]
+#CMD ["./configure.sh"]
+CMD ["/home/jre/bin/java", "-jar", "/home/undertow-2022101501.jar",  "0.0.0.0", "80", "/home/public"]
 
 EXPOSE 80
