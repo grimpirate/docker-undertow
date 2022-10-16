@@ -21,6 +21,6 @@ ADD index.html /home/public
 
 VOLUME ["/home/public"]
 
-CMD ["/home/jre/bin/java", "-jar", "/home/undertow-2022101501.jar",  "0.0.0.0", "80", "/home/public"]
+CMD ["/home/jre/bin/java", "-cp", "/home/undertow-2022101501.jar", "com.grimpirate.App", "0.0.0.0", "80", "/home/public"]
 
 EXPOSE 80
