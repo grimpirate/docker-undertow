@@ -2,7 +2,7 @@
 ## Build
 docker build -t undertow .
 ## Run
-docker run -p 80:80 -it undertow
+docker run -dp 80:80 -i undertow
 ## Prune
 docker system prune -a  
 docker container prune  
