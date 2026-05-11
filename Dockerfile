@@ -1,6 +1,6 @@
 FROM alpine
 
-RUN apk add --no-cache openjdk17-jdk maven binutils && rm -rf /var/cache/apk/*
+RUN apk add --no-cache openjdk25-jdk maven binutils && rm -rf /var/cache/apk/*
 
 WORKDIR /home
 RUN jlink --add-modules java.base,java.logging,java.management,java.naming,java.security.jgss,java.security.sasl,java.sql,java.xml,jdk.unsupported --no-header-files --no-man-pages --strip-debug --bind-services --ignore-signing-information --compress=2 --output jre
